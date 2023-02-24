@@ -1,0 +1,97 @@
+body {
+    background-color: #050210;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.innerkrug {
+    height: 500px;
+    width: 500px;
+    background-color: #0e0629;
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(2px);
+}
+
+.glow {
+    height: 600px;
+    width: 600px;
+    background: repeating-linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    border-radius: 50%;
+    position: absolute;
+    z-index: -3;
+    animation: rotate 2s;
+    animation-iteration-count: infinite;
+    filter: blur(50px);
+    animation-timing-function: linear;
+}
+
+
+@keyframes pulse{
+    from {width: 0; height: 0;}
+}
+
+
+@keyframes rotate {
+    0% {
+        rotate: 0deg;
+    }
+
+    20%{
+        rotate: 72deg;
+    }
+
+    40%{
+        rotate: 144deg;
+    }
+
+    60%{
+        rotate: 216deg;
+    }
+
+    80%{
+      rotate: 288deg;  
+    }
+
+    100%{
+        rotate: 360deg;
+    }
+}
+
+.outerkrug{
+    animation: rotate 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#animacijakruga{
+    animation: pulse 1.1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.outerkrug {
+    position: relative;
+    height: 600px;
+    width: 600px;
+    margin: 100px auto;
+    background-color: gray;
+    border-radius: 50%;
+    z-index: -2;
+}
+
+.podloga{
+    height: 500px;
+    width: 500px;
+    background-color: #050210;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+}
+
+.outerkrug {
+    background: repeating-linear-gradient(#fb5dad, #55fb9f, #b97aff);
+}
+
